@@ -8,7 +8,12 @@
       "repositories": "Репозитории",
       "tweets": "Твиты"
     },
-    "languages": "Язык"
+    "languages": {
+      "button": "Язык",
+      "choose_language": "Выберете язык",
+      "russian": "Русский",
+      "english": "Английский"
+    }
   },
   "pages": {
     "home": {

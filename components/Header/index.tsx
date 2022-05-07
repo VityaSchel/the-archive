@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes, { InferProps } from 'prop-types'
+import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Link, { Url } from 'next/link'
-import { useTranslation, i18n } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import cx from 'classnames'
@@ -12,11 +12,13 @@ import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import Button from '@mui/material/Button'
 import { MdLanguage } from 'react-icons/md'
 import Typography from '@mui/material/Typography'
+import LanguagesDialog from '%/components/Languages'
 
 export default function Header() {
   const router = useRouter()
   const { t } = useTranslation('common')
   const [noScroll, setNoScroll] = React.useState(true)
+  const [languagesDialogVisible, setLanguagesDialogVisible] = React.useState(false)
 
   useScrollPosition(({ currPos }) => {
     setNoScroll(currPos.y === 0)
@@ -50,10 +52,12 @@ export default function Header() {
           <Button 
             disableRipple 
             className={styles.languages}
+            onClick={() => setLanguagesDialogVisible(true)}
           >
             <MdLanguage />
-            <Typography sx={{ textTransform: 'none', marginLeft: 1 }}>{t('header.languages')}</Typography>
+            <Typography sx={{ textTransform: 'none', marginLeft: 1 }}>{t('header.languages.button')}</Typography>
           </Button>
+          <LanguagesDialog visible={languagesDialogVisible} setOpen={setLanguagesDialogVisible} />
         </Toolbar>
       </AppBar>
     </>
