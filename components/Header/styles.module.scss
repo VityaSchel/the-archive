@@ -1,5 +1,5 @@
 .header {
-  height: 80px;
+  height: 60px;
   border-radius: 0;
   padding: 10px 20px;
   display: flex;
@@ -18,10 +18,34 @@
 
     .bottomLine {
       color: #aeaeae;
+      transition: color 0.2s ease-out;
+    }
+
+    &:hover {
+      .bottomLine {
+        color: #dbdbdb;
+      }
     }
   }
 
+  .divider {
+    width: 1px;
+    display: flex;
+    align-self: center;
+    height: 90%;
+    background-color: #6d6d6d;
+    margin: 0 20px;
+  }
+
   .link {
-    
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #b1b1b1;
+    transition: color 0.2s ease-out;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }

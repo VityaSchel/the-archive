@@ -8,5 +8,10 @@
       "repositories": "Репозитории",
       "tweets": "Твиты"
     }
+  },
+  "pages": {
+    "home": {
+      "read_article": "Читать в блоге"
+    }
   }
 }

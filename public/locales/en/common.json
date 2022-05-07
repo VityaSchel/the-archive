@@ -8,5 +8,12 @@
       "tweets": "Tweets",
       "repositories": "Repositories"
     }
-  }  
+  },
+  "pages": {
+    "home": {
+      "heading": "What would you do,",
+      "subheading": "if major tech company terminated your account without any reason or warning and destroyed all your data, gradually collected for seven years?",
+      "read_article": "Read more"
+    }
+  }
 }
