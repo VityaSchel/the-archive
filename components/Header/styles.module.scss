@@ -1,5 +1,27 @@
 .header {
   height: 80px;
   border-radius: 0;
-  padding: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .headline {
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .bottomLine {
+      color: #aeaeae;
+    }
+  }
+
+  .link {
+    
+  }
 }

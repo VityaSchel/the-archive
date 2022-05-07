@@ -5,7 +5,9 @@ import Header from '../components/Header'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { store } from '%/components/store'
 import { Provider as ReduxProvider } from 'react-redux'
-import { Provider as TranslationProvider } from '%/components/i18n'
+import { appWithTranslation } from 'next-i18next'
+import i18nextConfig from '../next-i18next.config'
+import { useHMR } from '%/components/i18n/usehmr'
 
 const theme = createTheme({
   palette: {
@@ -14,11 +16,12 @@ const theme = createTheme({
 })
 
 function TheArchive({ Component, pageProps }: AppProps) {
+  useHMR()
+
   return (
     <ReduxProvider store={store}>
       <ThemeProvider theme={theme}>
         <div className={styles.app}>
-          <Header />
           <Component {...pageProps} />
         </div>
       </ThemeProvider>
@@ -26,4 +29,4 @@ function TheArchive({ Component, pageProps }: AppProps) {
   )
 }
 
-export default TheArchive
+export default appWithTranslation(TheArchive, i18nextConfig)

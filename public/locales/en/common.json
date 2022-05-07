@@ -1,0 +1,12 @@
+{
+  "header": {
+    "headline": "The Archive",
+    "bottom_line": "by hloth",
+    "links": {
+      "videos": "Videos",
+      "photos": "Photos",
+      "tweets": "Tweets",
+      "repositories": "Repositories"
+    }
+  }  
+}

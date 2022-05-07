@@ -1,0 +1,12 @@
+{
+  "header": {
+    "headline": "Сайт Архива",
+    "bottom_line": "от hloth",
+    "links": {
+      "videos": "Видео",
+      "photos": "Фотографии",
+      "repositories": "Репозитории",
+      "tweets": "Твиты"
+    }
+  }
+}
