@@ -9,6 +9,9 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import cx from 'classnames'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import Button from '@mui/material/Button'
+import { MdLanguage } from 'react-icons/md'
+import Typography from '@mui/material/Typography'
 
 export default function Header() {
   const router = useRouter()
@@ -44,6 +47,13 @@ export default function Header() {
           <Item href='instagram'>{t('header.links.photos')}</Item>
           <Item href='twitter'>{t('header.links.tweets')}</Item>
           <Item href='github'>{t('header.links.repositories')}</Item>
+          <Button 
+            disableRipple 
+            className={styles.languages}
+          >
+            <MdLanguage />
+            <Typography sx={{ textTransform: 'none', marginLeft: 1 }}>{t('header.languages')}</Typography>
+          </Button>
         </Toolbar>
       </AppBar>
     </>

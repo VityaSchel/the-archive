@@ -7,7 +7,8 @@
       "photos": "Photos",
       "tweets": "Tweets",
       "repositories": "Repositories"
-    }
+    },
+    "languages": "Language"
   },
   "pages": {
     "home": {
@@ -23,19 +24,21 @@
         },
         "instagram": {
           "title": "List of my photos and highlights in Instagram",
-          "image_alt": "",
+          "image_alt": "Screenshot of my Instagram profile",
           "description": "In case it gets banned too",
           "button": "Browse photos"
         },
         "twitter": {
           "title": "Timeline of my tweets in Twitter",
           "description": "Free speech is different in Russia and States",
-          "button": "Coming soon"
+          "button": "Coming soon",
+          "image_alt": "Screenshot of my Twitter profile"
         },
         "github": {
           "title": "Public archive of my repositories on GitHub",
           "description": "I experienced US Trade sanctions when I was on vacation in Crimea, what if it expands on whole country?",
-          "button": "Coming soon"
+          "button": "Coming soon",
+          "image_alt": "Screenshot of my GitHub profile"
         },
         "last_update": "Last update"
       }

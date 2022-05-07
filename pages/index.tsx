@@ -83,15 +83,13 @@ function PageCard(props: PageCardProps) {
   return (
     <Card className={styles.pageCard}>
       <div className={styles.content}>
-        <div>
-          <Typography variant='h3' className={styles.title}>{t('pages.home.cards.' + props.translationCode + '.title')}</Typography>
-          <Typography variant='h4' className={styles.description}>{t('pages.home.cards.' + props.translationCode + '.description')}</Typography>
-          {props.lastUpdate && (
-            <Typography variant='caption' className={styles.lastUpdate}>{t('pages.home.cards.last_update')}: {
-              format(props.lastUpdate, 'd MMMM yyyy', { locale: ru })
-            }</Typography>
-          )}
-        </div>
+        <Typography variant='h3' className={styles.title}>{t('pages.home.cards.' + props.translationCode + '.title')}</Typography>
+        <Typography variant='h4' className={styles.description}>{t('pages.home.cards.' + props.translationCode + '.description')}</Typography>
+        {props.lastUpdate && (
+          <Typography variant='caption' className={styles.lastUpdate}>{t('pages.home.cards.last_update')}: {
+            format(props.lastUpdate, 'd MMMM yyyy', { locale: ru })
+          }</Typography>
+        )}
         {props.lastUpdate ? (
           <ButtonWithArrow className={styles.button} variant='contained'>
             {t('pages.home.cards.' + props.translationCode + '.button')}
