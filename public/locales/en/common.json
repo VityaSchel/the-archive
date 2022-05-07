@@ -13,7 +13,32 @@
     "home": {
       "heading": "What would you do,",
       "subheading": "if major tech company terminated your account without any reason or warning and destroyed all your data, gradually collected for seven years?",
-      "read_article": "Read more"
+      "read_article": "Read more",
+      "cards": {
+        "youtube": {
+          "title": "Collection of my YouTube videos",
+          "description": "With comments, statistics and even recreated videofiles",
+          "image_alt": "Screenshot of my YouTube channel",
+          "button": "Browse videos"
+        },
+        "instagram": {
+          "title": "List of my photos and highlights in Instagram",
+          "image_alt": "",
+          "description": "In case it gets banned too",
+          "button": "Browse photos"
+        },
+        "twitter": {
+          "title": "Timeline of my tweets in Twitter",
+          "description": "Free speech is different in Russia and States",
+          "button": "Coming soon"
+        },
+        "github": {
+          "title": "Public archive of my repositories on GitHub",
+          "description": "I experienced US Trade sanctions when I was on vacation in Crimea, what if it expands on whole country?",
+          "button": "Coming soon"
+        },
+        "last_update": "Last update"
+      }
     }
   }
 }
