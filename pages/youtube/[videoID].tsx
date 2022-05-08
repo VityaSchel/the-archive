@@ -5,11 +5,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '%/styles/VideoPage.module.scss'
 import Header from '%/components/Header'
 import Head from 'next/head'
+import Link from 'next/link'
 import Video from '%/components/Video'
 import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
 import { useTranslation } from 'next-i18next'
-import { pluralize } from '%/components/utils'
+import { pluralize, formatText } from '%/components/utils'
 
 YouTubeVideoPage.propTypes = {
   video: PropTypes.object.isRequired,
@@ -67,6 +68,28 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
             </div>}
           </div>
           <hr />
+          <p className={styles.description}>
+            {formatText(props.video.description)}
+          </p>
+          <hr />
+          <div className={styles.commentsHeader}>
+            <Typography component='h3' className={styles.commentsTitle}>
+              {Array.isArray(props.video.comments)
+                ? `${props.video.comments.length} ${
+                  pluralize(props.video.comments.length, t('pages.youtube.pages.video.comments_title'))
+                }` : props.video.comments === false
+                  ? t('pages.youtube.pages.video.comments_disabled')
+                  : t('pages.youtube.pages.video.no_info_on_comments')
+              }
+            </Typography>
+          </div>
+          {Array.isArray(props.video.comments) && (
+            <div className={styles.comments}>
+              {props.video.comments.map((comment, i) => (
+                <Comment key={i} comment={comment} />
+              ))}
+            </div>
+          )}
         </div>
         <div className={styles.nextVideos}>
           <Typography variant='h6'>{t('pages.youtube.pages.video.next_videos')}</Typography>
@@ -83,6 +106,54 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
         </div>
       </div>
     </main>
+  )
+}
+
+const basicCommentPropTypes = {
+  author: PropTypes.string,
+  date: PropTypes.string,
+  likes: PropTypes.number,
+  text: PropTypes.string,
+}
+Comment.propTypes = {
+  comment: PropTypes.shape({
+    ...basicCommentPropTypes,
+    replies: PropTypes.arrayOf(PropTypes.shape(basicCommentPropTypes))
+  })
+}
+interface BasicCommentProps {
+  author: string
+  date: string
+  likes: number
+  text: string
+}
+interface CommentProps extends BasicCommentProps {
+  replies: BasicCommentProps
+}
+function Comment(props: { comment: CommentProps }) {
+  const { t } = useTranslation()
+
+  return (
+    <div className={styles.comment}>
+      <div className={styles.topLine}>
+        <Typography className={styles.author}>{props.comment.author}</Typography>
+        <Typography className={styles.date}>{props.comment.date}</Typography>
+      </div>
+      <p className={styles.text}>
+        {formatText(props.comment.text)}
+      </p>
+      {Boolean(props.comment.replies?.length) && (
+        <div className={styles.replies}>
+          <Typography className={styles.repliesLabel}>{t('pages.youtube.pages.video.replies')}:</Typography>
+          {props.comment.replies.map((reply, i) => (
+            <Comment
+              comment={reply}
+              key={i}
+            />
+          ))}
+        </div>
+      )}
+    </div>
   )
 }
 

@@ -9,8 +9,10 @@
     gap: 24px;
 
     .video {
+      width: 1100px;
+
       .player {
-        width: 1100px;
+        width: 100%;
         height: auto;
         aspect-ratio: 1920 / 1080;
       }
@@ -83,6 +85,63 @@
         height: 1px;
         background-color: rgba(255, 255, 255, 0.1);
         border: none;
+      }
+
+      .description {
+        width: 100%;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      .commentsHeader {
+        display: flex;
+        align-items: center;
+        margin: 24px 0;
+
+        & > *:nth-child(1) {
+          font-size: 16px;
+        }
+      }
+
+      .comments {
+        .comment {
+          margin-bottom: 16px;
+
+          .topLine {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            .author {
+              font-size: 13px;
+              font-weight: 500;
+            }
+
+            .date {
+              font-size: 14px;
+              color: #aaaaaa;
+            }
+          }
+
+          .text {
+            color: #fff;
+            margin-top: 4px;
+            font-size: 14px;
+            letter-spacing: normal;
+          }
+
+          .replies {
+            margin-left: 50px;
+
+            .repliesLabel {
+              font-weight: 600;
+              font-size: 14px;
+              margin-bottom: 10px;
+            }
+          }
+        }
       }
     }
 

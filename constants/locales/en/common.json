@@ -59,7 +59,10 @@
         },
         "video": {
           "next_videos": "Next videos",
-          "unknown": "Unknown"
+          "unknown": "Unknown",
+          "comments_disabled": "Comments were disabled",
+          "comments_title": "comments",
+          "no_info_on_comments": "No info about comments"
         }
       }
     }
