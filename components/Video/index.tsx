@@ -3,9 +3,7 @@ import styles from './styles.module.scss'
 import { Skeleton } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import Typography from '@mui/material/Typography'
-import { pluralize } from '%/components/utils'
-import { format, parse } from 'date-fns'
-import { ru, en } from 'date-fns/locale'
+import { pluralize, translateDate } from '%/components/utils'
 import Link from 'next/link'
 import cx from 'classnames'
 
@@ -25,24 +23,9 @@ interface VideoProps {
 }
 export default function Video(props: VideoProps) {
   const { t, i18n } = useTranslation()
-
-  const translateDate = (date: string) => {
-    const formatDate = (template: string) => {
-      const uploadDate = parse(date, template, new Date(), { locale: ru })
-      return format(uploadDate, template, { locale: i18n.language === 'ru' ? ru : en })
-    }
-
-    if (date.match(/^\d+ [а-я]+ \d+$/)) {
-      return formatDate('dd MMMM yyyy')
-    } else if(date.match(/^[а-я]+ \d+$/)) {
-      return formatDate('MMMM yyyy')
-    } else {
-      return date
-    }
-  }
   
   return (
-    <Link href={'youtube/' + props.codeName} locale={i18n.language}>
+    <Link href={'/youtube/' + props.codeName} locale={i18n.language}>
       <a className={cx(styles.video, { [styles.horizontal]: props.horizontal })}>
         <div className={styles.thumbnail}>
           <Skeleton variant='rectangular' className={styles.thumbnailSkeleton} />
@@ -54,7 +37,7 @@ export default function Video(props: VideoProps) {
             {props.views !== null && (
               <span>{props.views} {pluralize(props.views, t('pages.youtube.pages.videos.item.views'))}&nbsp;•&nbsp;</span>
             )}
-            <span>{translateDate(props.date)}</span>
+            <span>{translateDate(i18n.language, props.date)}</span>
           </Typography>
         </div>
         {/* <div>{JSON.stringify(props.data)}</div> */}

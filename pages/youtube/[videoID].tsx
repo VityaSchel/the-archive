@@ -10,7 +10,7 @@ import Video from '%/components/Video'
 import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
 import { useTranslation } from 'next-i18next'
-import { pluralize, formatText } from '%/components/utils'
+import { pluralize, formatText, translateDate } from '%/components/utils'
 
 YouTubeVideoPage.propTypes = {
   video: PropTypes.object.isRequired,
@@ -21,7 +21,7 @@ interface YouTubeVideoPageProps {
   nextVideos: typeof videos
 }
 function YouTubeVideoPage(props: YouTubeVideoPageProps) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const likes = props.video.likes === '' ? null : props.video.likes
   const dislikes = props.video.dislikes === '' ? null : props.video.dislikes
@@ -35,14 +35,19 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
       <div className={styles.innerContainer}>
         <div className={styles.video}>
           <div className={styles.player}>
-            <Skeleton variant='rectangular' height='100%' />
+            <Skeleton variant='rectangular' height='100%' className={styles.fileBackground} />
+            <video src={`https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`} />
           </div>
           <Typography component='h1' className={styles.title}>{props.video.name}</Typography>
           <div className={styles.info}>
             <Typography variant='caption' className={styles.caption}>
-              <span>{props.video.views} {pluralize(props.video.views, t('pages.youtube.pages.videos.item.views'))}</span>
-              <span>&nbsp;•&nbsp;</span>
-              <span>{props.video.uploadDate}</span>
+              {props.video.views !== '' ? (
+                <>
+                  <span>{props.video.views} {pluralize(props.video.views, t('pages.youtube.pages.videos.item.views'))}</span>
+                  <span>&nbsp;•&nbsp;</span>
+                </>
+              ) : <span>{t('pages.youtube.pages.videos.item.upload_date')}: </span> }
+              <span>{translateDate(i18n.language, props.video.uploadDate)}</span>
             </Typography>
             {(likes !== null || dislikes !== null) && <div className={styles.ratio}>
               <div className={styles.buttons}>
@@ -69,7 +74,10 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
           </div>
           <hr />
           <p className={styles.description}>
-            {formatText(props.video.description)}
+            {props.video.description === ''
+              ? <i>{t('pages.youtube.pages.video.no_info_on_description')}</i>
+              : formatText(props.video.description)
+            }
           </p>
           <hr />
           <div className={styles.commentsHeader}>

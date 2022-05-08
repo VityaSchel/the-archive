@@ -54,7 +54,8 @@
         "videos": {
           "item": {
             "thumbnail_alt": "Video thumbnail",
-            "views": "views"
+            "views": "views",
+            "upload_date": "Upload date"
           }
         },
         "video": {

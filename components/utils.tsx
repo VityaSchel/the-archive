@@ -1,6 +1,8 @@
 import React from 'react'
 import plural from 'plural-ru'
 import Link from 'next/link'
+import { format, parse } from 'date-fns'
+import { ru, en } from 'date-fns/locale'
 
 export const pluralize = (number: string | number, str: string) => {
   if (typeof number === 'string') number = Number(number.replace(/^[^0-9]+/, ''))
@@ -44,4 +46,20 @@ export function formatText(text: string) {
       return [m]
     }
   }).reduce((prev, cur) => prev.concat(cur), [])
+}
+
+export function translateDate(language: string, date: string) {
+  const formatDate = (template: string, intlOptions: object) => {
+    const uploadDate = parse(date, template, new Date(), { locale: ru })
+    // return format(uploadDate, template, { locale: i18n.language === 'ru' ? ru : en })
+    return Intl.DateTimeFormat(language, intlOptions).format(uploadDate)
+  }
+
+  if (date.match(/^\d+ [а-я]+ \d+$/)) {
+    return formatDate('dd MMMM yyyy', { year: 'numeric', month: 'long', day: 'numeric' })
+  } else if (date.match(/^[а-я]+ \d+$/)) {
+    return formatDate('MMMM yyyy', { year: 'numeric', month: 'long' })
+  } else {
+    return date
+  }
 }
