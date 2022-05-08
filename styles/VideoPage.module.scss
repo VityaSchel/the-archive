@@ -132,6 +132,18 @@
             letter-spacing: normal;
           }
 
+          .likes {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            gap: 10px;
+
+            .label {
+              font-size: 12px;
+              color: #aaaaaa;
+            }
+          }
+
           .replies {
             margin-left: 50px;
 
