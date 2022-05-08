@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 import { Skeleton } from '@mui/material'
 import { useTranslation } from 'next-i18next'
 import Typography from '@mui/material/Typography'
-import plural from 'plural-ru'
+import { pluralize } from '%/components/utils'
 import { format, parse } from 'date-fns'
 import { ru, en } from 'date-fns/locale'
 import Link from 'next/link'
@@ -25,20 +25,6 @@ interface VideoProps {
 }
 export default function Video(props: VideoProps) {
   const { t, i18n } = useTranslation()
-
-  const pluralize = (number: string | number, str: string) => {
-    if (typeof number === 'string') number = Number(number.replace(/^[^0-9]+/, ''))
-    try {
-      const translation = JSON.parse(str)
-      if(Array.isArray(translation)) {
-        return plural(number, translation[0], translation[1], translation[2])
-      } else {
-        return str
-      }
-    } catch(e) {
-      return str
-    }
-  }
 
   const translateDate = (date: string) => {
     const formatDate = (template: string) => {

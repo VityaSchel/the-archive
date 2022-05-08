@@ -14,6 +14,76 @@
         height: auto;
         aspect-ratio: 1920 / 1080;
       }
+
+      .title {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 20px;
+      }
+
+      .info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 36px;
+
+        // & > * {
+        //   flex: 1
+        // }
+        
+        .caption {
+          color: #aaaaaa;
+          font-size: 14px;
+          flex: 1;
+        }
+        
+        .ratio {
+          display: flex;
+          flex-direction: column;
+
+          .buttons {
+            display: flex;
+            color: #fff;
+            align-items: center;
+            gap: 8px;
+
+            div {
+              display: flex;
+              align-items: center;
+              text-transform: uppercase;
+              font-size: 14px;
+              font-weight: 500;
+              letter-spacing: 0.5;
+              padding-right: 6px;
+
+              svg {
+                $size: 24px;
+                width: $size;
+                height: $size;
+                margin: 8px;
+                box-sizing: content-box;
+              }
+            }
+          }
+
+          .ratioBar {
+            height: 2px;
+            background-color: #717171;
+            margin-top: 5px;
+
+            .filledRatioBar {
+              height: 100%;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      hr {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+      }
     }
 
     .nextVideos {
