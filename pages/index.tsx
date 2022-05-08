@@ -16,36 +16,34 @@ import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <main className={styles.main}>
       <Head>
         <title>Create Next App</title>
       </Head>
       <Header />
 
-      <main className={styles.main}>
-        <TopBlock />
-        <div className={styles.cards}>
-          <PageCard
-            translationCode='youtube'
-            img='https://ik.imagekit.io/hloth/the-archive-static/youtube.png?tr=n-landing_thumb'
-            lastUpdate={new Date('2022.04.20')}
-          />
-          <PageCard
-            translationCode='instagram'
-            img='https://ik.imagekit.io/hloth/the-archive-static/instagram.png?tr=n-landing_thumb'
-            lastUpdate={new Date('2022.05.08')}
-          />
-          <PageCard
-            translationCode='twitter'
-            img='https://ik.imagekit.io/hloth/the-archive-static/twitter.png?tr=n-landing_thumb'
-          />
-          <PageCard
-            translationCode='github'
-            img='https://ik.imagekit.io/hloth/the-archive-static/github.png?tr=n-landing_thumb'
-          />
-        </div>
-      </main>
-    </div>
+      <TopBlock />
+      <div className={styles.cards}>
+        <PageCard
+          translationCode='youtube'
+          img='https://ik.imagekit.io/hloth/the-archive-static/youtube.png?tr=n-landing_thumb'
+          lastUpdate={new Date('2022.04.20')}
+        />
+        <PageCard
+          translationCode='instagram'
+          img='https://ik.imagekit.io/hloth/the-archive-static/instagram.png?tr=n-landing_thumb'
+          lastUpdate={new Date('2022.05.08')}
+        />
+        <PageCard
+          translationCode='twitter'
+          img='https://ik.imagekit.io/hloth/the-archive-static/twitter.png?tr=n-landing_thumb'
+        />
+        <PageCard
+          translationCode='github'
+          img='https://ik.imagekit.io/hloth/the-archive-static/github.png?tr=n-landing_thumb'
+        />
+      </div>
+    </main>
   )
 }
 

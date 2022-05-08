@@ -1,3 +1,14 @@
-.videos {
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 64px;
   
+  .videos {
+    width: min-content;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 4px;
+    row-gap: 24px;
+    margin: 20px 0;
+  }
 }

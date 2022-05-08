@@ -1,15 +1,18 @@
+.backgroundPlaceholder {
+  height: 64px;
+}
+
 .header {
-  // height: 64px;
   border-radius: 0;
   // background-color: transparent;
   position: fixed;
-  background-color: rgba(26, 26, 26, 0.5);
+  background-color: rgba(26, 26, 26, 0.5) !important;
   transition: background-color 0.2s ease-in-out;
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px) !important;
   
   &.noScroll {
-    background: none;
-    background-color: transparent;
+    background: none !important;
+    background-color: transparent !important;
   }
   
   .toolbar {

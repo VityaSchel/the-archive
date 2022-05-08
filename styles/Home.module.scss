@@ -11,9 +11,7 @@
     background-color: #000;
     width: 100%;
     gap: 100px;
-    $defaultPadding: 70px;
-    padding: $defaultPadding 0;
-    padding-top: $defaultPadding + 60px;
+    padding: 70px 0;
     
     .info {
       display: flex;

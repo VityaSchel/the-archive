@@ -64,7 +64,16 @@ export default function LanguagesDialog(props: LanguagesDialogProps) {
               <Image src={enFlag} width={100} height={100} alt='En' />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={t('header.languages.english')} />
+          <ListItemText 
+            primary={t('header.languages.english')} 
+            secondary={t('header.languages.english_warning')}
+            secondaryTypographyProps={{
+              sx: {
+                color: '#9c9c9c',
+                maxWidth: 280
+              }
+            }}
+          />
         </ListItem>
         <ListItem button onClick={setLanguage('ru')}>
           <ListItemAvatar>

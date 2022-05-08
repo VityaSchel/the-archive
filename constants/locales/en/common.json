@@ -12,7 +12,8 @@
       "button": "Language",
       "choose_language": "Choose language",
       "russian": "Russian",
-      "english": "English"
+      "english": "English",
+      "english_warning": "Only interface elements are translated, most of content is in Russian"
     }
   },
   "pages": {
@@ -46,6 +47,16 @@
           "image_alt": "Screenshot of my GitHub profile"
         },
         "last_update": "Last update"
+      }
+    },
+    "youtube": {
+      "pages": {
+        "videos": {
+          "item": {
+            "thumbnail_alt": "Video thumbnail",
+            "views": "views"
+          }
+        }
       }
     }
   }
