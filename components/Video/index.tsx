@@ -6,13 +6,15 @@ import Typography from '@mui/material/Typography'
 import { pluralize, translateDate } from '%/components/utils'
 import Link from 'next/link'
 import cx from 'classnames'
+import Image from 'next/image'
 
 Video.propTypes = {
   title: PropTypes.string.isRequired,
   views: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   date: PropTypes.string.isRequired,
   codeName: PropTypes.string.isRequired,
-  horizontal: PropTypes.bool
+  horizontal: PropTypes.bool,
+  thumbnail: PropTypes.string
 }
 interface VideoProps {
   title: string
@@ -20,6 +22,7 @@ interface VideoProps {
   date: string
   codeName: string
   horizontal?: boolean
+  thumbnail: string
 }
 export default function Video(props: VideoProps) {
   const { t, i18n } = useTranslation()
@@ -29,7 +32,7 @@ export default function Video(props: VideoProps) {
       <a className={cx(styles.video, { [styles.horizontal]: props.horizontal })}>
         <div className={styles.thumbnail}>
           <Skeleton variant='rectangular' className={styles.thumbnailSkeleton} />
-          <img src={props.thumbnail} alt={t('')} />
+          {props.thumbnail && <Image src={props.thumbnail} alt={t('')} layout='fill' className={styles.thumbnailImage} />}
         </div>
         <div className={styles.meta}>
           <Typography className={styles.title}>{props.title}</Typography>

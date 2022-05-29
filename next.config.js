@@ -6,7 +6,8 @@ const nextConfig = {
   i18n, localePath,
   images: {
     domains: ['ik.imagekit.io']
-  }
+  },
+  runtime: 'nodejs'
 }
 
 module.exports = nextConfig

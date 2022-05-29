@@ -15,10 +15,12 @@ import { ru, en } from 'date-fns/locale'
 import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
+  const { t } = useTranslation()
+
   return (
     <main className={styles.main}>
       <Head>
-        <title>Create Next App</title>
+        <title>{t('pages.home.title')}</title>
       </Head>
       <Header />
 

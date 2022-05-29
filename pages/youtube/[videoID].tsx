@@ -5,12 +5,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '%/styles/VideoPage.module.scss'
 import Header from '%/components/Header'
 import Head from 'next/head'
-import Link from 'next/link'
 import Video from '%/components/Video'
 import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
 import { useTranslation } from 'next-i18next'
-import { pluralize, formatText, translateDate } from '%/components/utils'
+import { pluralize, formatText, translateDate, getThumbnailURL } from '%/components/utils'
+import VideoPlayer from '%/components/VideoJS'
 
 YouTubeVideoPage.propTypes = {
   video: PropTypes.object.isRequired,
@@ -25,18 +25,55 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
 
   const likes = props.video.likes === '' ? null : props.video.likes
   const dislikes = props.video.dislikes === '' ? null : props.video.dislikes
+
+  const videoJsOptions = {
+    autoplay: false,
+    playbackRates: [0.5, 1, 1.25, 1.5, 2],
+    width: 720,
+    height: 300,
+    controls: true,
+    sources: [
+      {
+        src: `https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`,
+        type: 'video/mp4',
+      },
+    ],
+  };
   
   return (
     <main className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>{t('pages.youtube.pages.video.title').replace('%video_name%', props.video.name)}</title>
       </Head>
       <Header />
       <div className={styles.innerContainer}>
         <div className={styles.video}>
           <div className={styles.player}>
             <Skeleton variant='rectangular' height='100%' className={styles.fileBackground} />
-            <video src={`https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`} />
+            {/* <video src={`https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`} /> */}
+            <div> 
+            <VideoPlayer 
+              // options={{
+              //   autoplay: false,
+              //   controls: true,
+              //   sources: [
+              //     {
+              //       src: `https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`,
+              //       type: 'video/mp4'
+              //     }
+              //   ]
+              // }}
+              // autoplay={false}
+              // controls={true}
+              // sources={[
+              //   {
+              //     type: 'video/mp4',
+              //     src: `https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`
+              //   }
+              // ]}
+                {...videoJsOptions}
+            />
+            </div>
           </div>
           <Typography component='h1' className={styles.title}>{props.video.name}</Typography>
           <div className={styles.info}>
@@ -109,6 +146,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
               date={video.uploadDate}
               codeName={video.codeName}
               horizontal
+              thumbnail={getThumbnailURL(video.filename)}
             />
           ))}
         </div>

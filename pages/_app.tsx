@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import 'video.js/dist/video-js.css'
 import styles from '../styles/app.module.scss'
 import type { AppProps } from 'next/app'
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material/styles'

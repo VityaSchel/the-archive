@@ -7,8 +7,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import clone from 'just-clone'
 import Video from '%/components/Video'
+import { useTranslation } from 'next-i18next'
+import { getThumbnailURL } from '%/components/utils'
 
 const YouTubeVideos: NextPage = () => {
+  const { t } = useTranslation()
   const fi = item => videos.findIndex(vid => vid.codeName === item.codeName)
   const sortDateDesc = (a: typeof videos[number], b: typeof videos[number]) => fi(a) > fi(b) ? 1 : -1
   const sortDateAsc = (a: typeof videos[number], b: typeof videos[number]) => fi(a) < fi(b) ? 1 : -1
@@ -18,7 +21,7 @@ const YouTubeVideos: NextPage = () => {
   return (
     <main className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>{t('pages.youtube.title')}</title>
       </Head>
       <Header />
       <div className={styles.videos}>
@@ -29,6 +32,7 @@ const YouTubeVideos: NextPage = () => {
             views={video.views === '' ? null : video.views}
             date={video.uploadDate}
             codeName={video.codeName}
+            thumbnail={getThumbnailURL(video.filename)}
           />
         ))}
       </div>
