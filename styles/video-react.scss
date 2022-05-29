@@ -1,0 +1,153 @@
+@import './globals.scss';
+
+.video-react {
+  padding-top: unset !important;
+  height: 100% !important;
+  font-family: $fonts  !important;
+}
+
+.video-react-control-bar {
+  z-index: 1;
+  height: 4em !important;
+  background-color: transparent !important;
+  background: linear-gradient(to top, #000, transparent) !important;
+}
+
+.video-react-time-control,
+.video-react-time-divider {
+  line-height: 4em !important;
+}
+
+.video-react-control:focus {
+  text-shadow: none !important;
+}
+
+.video-react-playback-rate {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-react-control.video-react-button {
+  &:before {
+    text-shadow: none !important;
+    color: #e8e8e8;
+    transition: color 200ms ease-in-out;
+    font-size: 2.5em !important;
+    width: 2.222222222rem !important;
+  }
+
+  &:hover:before {
+    color: #ffffff;
+  }
+}
+
+.video-react-menu-item {
+  font-family: $fonts  !important;
+  // color: red !important;
+}
+
+.video-react-volume-menu-button-horizontal .video-react-menu {
+  display: flex !important;
+  align-items: center;
+
+  .video-react-volume-bar {
+    width: unset !important;
+  }
+}
+
+.video-react .video-react-slider:focus {
+  box-shadow: none !important;
+}
+
+.video-react .video-react-big-play-button {
+  left: 50% !important;
+  top: 50% !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 100px !important;
+  background-color: #fff !important;
+  color: #000 !important;
+  z-index: 3 !important;
+  transform: translate(-50%, -50%) !important;
+  
+  // &.big-play-button-hide {
+  // }
+}
+
+.video-react-play-progress:after {
+  font-family: $fonts  !important;
+}
+
+.video-react-fullscreen {
+  .video-react-control-bar {
+    height: 8em !important;
+  }
+
+  .video-react-control-bar .video-react-button {
+    width: 5rem !important;
+  }
+
+  .video-react-time-control {
+    font-size: 2em !important;
+  }
+
+  .video-react-control.video-react-button {
+    &:before {
+      text-shadow: none !important;
+      color: #e8e8e8;
+      transition: color 200ms ease-in-out;
+      font-size: 5em !important;
+      width: 5rem !important;
+    }
+
+    &:hover:before {
+      color: #ffffff;
+    }
+  }
+
+  .video-react-playback-rate {
+    font-size: 1.5em !important;
+  }
+
+  a.video-react-control {
+    background-size: 40px;
+  }
+
+  .video-react-progress-holder,
+  .video-react-slider-bar {
+    height: 1em !important;
+
+    .video-react-load-progress {
+      height: 1em !important;
+    }
+  }
+
+  .video-react-play-progress:before {
+    font-size: 3em !important;
+  }
+
+  .video-react-play-progress:after {
+    transform: translateY(-10px);
+  }
+
+  .video-react-progress-holder .video-react-load-progress div {
+    height: 1em !important;
+  }
+
+  .video-react-menu-button-inline:hover {
+    width: 12rem !important;
+    
+    .video-react-slider-horizontal .video-react-volume-level {
+      height: 1em !important;
+    }
+  }
+
+  .video-react-volume-menu-button .video-react-menu-content {
+    overflow: visible !important;
+  }
+
+  .video-react-volume-level:before {
+    font-size: 2.7em !important;
+  }
+}

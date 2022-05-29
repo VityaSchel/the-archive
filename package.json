@@ -29,6 +29,7 @@
     "react-icons": "^4.3.1",
     "react-redux": "^8.0.1",
     "sass": "^1.51.0",
+    "video-react": "^0.15.0",
     "video.js": "^7.18.1",
     "videojs-youtube": "^2.6.1"
   },

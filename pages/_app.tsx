@@ -1,7 +1,9 @@
-import '../styles/globals.css'
-import 'video.js/dist/video-js.css'
+import '../styles/globals.scss'
+import '../styles/video-react.scss'
+import 'node_modules/video-react/dist/video-react.css'
 import styles from '../styles/app.module.scss'
 import type { AppProps } from 'next/app'
+import NextNProgress from 'nextjs-progressbar'
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material/styles'
 import { store } from '%/components/store'
 import { Provider as ReduxProvider } from 'react-redux'
@@ -33,6 +35,13 @@ function TheArchive({ Component, pageProps, emotionCache = clientSideEmotionCach
       <CacheProvider value={emotionCache}>
         <ThemeProvider theme={theme}>
           <div className={styles.app}>
+            <NextNProgress
+              color="#29D"
+              startPosition={0.3}
+              stopDelayMs={200}
+              height={3}
+              showOnShallow={true}
+            />
             <Component {...pageProps} />
           </div>
         </ThemeProvider>

@@ -105,7 +105,8 @@
     "draftPlaylist": false,
     "note": "Удалено из инстаграма и с макбука",
     "codeName": "strim_gostudy_29_sentyabrya_2021_v_instagrame_so",
-    "filename": "strim_gostudy_29_sentyabrya_2021_v_instagrame_so_dnya_otkrytyh_dverey_s_normalnym_zvukom.mp4"
+    "filename": "strim_gostudy_29_sentyabrya_2021_v_instagrame_so_dnya_otkrytyh_dverey_s_normalnym_zvukom.mp4",
+    "lost": true
   },
   {
     "name": "Антон Пикули — Пародия на фиксиков",
@@ -146,7 +147,8 @@
     "draftPlaylist": false,
     "note": "У меня есть фрагмент длиной в несколько секунд с музыкой, нужно лишь повторить его до 10 часов, зарендерить и загрузить.",
     "codeName": "vladimir_milov_fleksit_pod_svoyo_bassboosted_intro",
-    "filename": "vladimir_milov_fleksit_pod_svoyo_bassboosted_intro__10_chasov_.mp4"
+    "filename": "vladimir_milov_fleksit_pod_svoyo_bassboosted_intro__10_chasov_.mp4",
+    "lost": true
   },
   {
     "name": "Опять ничего не получается с React Native (shitpost)",
@@ -200,7 +202,8 @@
     "draftPlaylist": false,
     "note": "Все сурсы были удалены и их компиляция тоже",
     "codeName": "sbornik_vseh_chastushek_glada_valakasa_2020-2021",
-    "filename": "sbornik_vseh_chastushek_glada_valakasa_2020-2021.mp4"
+    "filename": "sbornik_vseh_chastushek_glada_valakasa_2020-2021.mp4",
+    "lost": true
   },
   {
     "name": "Симулятор Маши из GoStudy — трейлер к мобильной игре 2021",
@@ -240,7 +243,8 @@
     "draftPlaylist": false,
     "note": "Старое видео почему-то было удалено, но возможно я когда нибудь реализую speech recognition и сделаю видео",
     "codeName": "vremya_pokazhet_no_kogda_oni_govoryat_ukraina_vide",
-    "filename": "__vremya_pokazhet____no_kogda_oni_govoryat_ukraina__video_uskoryaetsya_v_2_raza.mp4"
+    "filename": "__vremya_pokazhet____no_kogda_oni_govoryat_ukraina__video_uskoryaetsya_v_2_raza.mp4",
+    "lost": true
   },
   {
     "name": "Команда Навального, но только когда они говорят «Умное голосование»",
@@ -253,7 +257,8 @@
     "draftPlaylist": false,
     "note": "Удален с макбука",
     "codeName": "komanda_navalnogo_no_tolko_kogda_oni_govoryat_umno",
-    "filename": "komanda_navalnogo__no_tolko_kogda_oni_govoryat___umnoe_golosovanie__.mp4"
+    "filename": "komanda_navalnogo__no_tolko_kogda_oni_govoryat___umnoe_golosovanie__.mp4",
+    "lost": true
   },
   {
     "name": "Спидран по созданию сайта про Валакаса [WR] 48:54:27.228. Таймлапс написания сайта президента Абобы",
@@ -281,7 +286,8 @@
     "draftPlaylist": false,
     "note": "Удален с макбука вместе с исходной записью",
     "codeName": "spidran_po_sozdaniyu_sayta_pro_valakasa_wr_48_54_2",
-    "filename": "spidran_po_sozdaniyu_sayta_pro_valakasa__wr__48_54_27_228__taymlaps_napisaniya_sayta_prezidenta_aboby.mp4"
+    "filename": "spidran_po_sozdaniyu_sayta_pro_valakasa__wr__48_54_27_228__taymlaps_napisaniya_sayta_prezidenta_aboby.mp4",
+    "lost": true
   },
   {
     "name": "Как создать звуки для игры в audacity за 24 секунды",
@@ -301,7 +307,8 @@
     "draftPlaylist": false,
     "note": "Удален с макбука",
     "codeName": "kak_sozdat_zvuki_dlya_igry_v_audacity_za_24_sekund",
-    "filename": "kak_sozdat_zvuki_dlya_igry_v_audacity_za_24_sekundy.mp4"
+    "filename": "kak_sozdat_zvuki_dlya_igry_v_audacity_za_24_sekundy.mp4",
+    "lost": true
   },
   {
     "name": "Владимир Путин — ПАМ",
@@ -314,7 +321,8 @@
     "draftPlaylist": false,
     "note": "Нет смысла искать и перезаливать, лучше посмотрите 10-часовую версию https://www.youtube.com/watch?v=ZnGH3YAhmU4",
     "codeName": "vladimir_putin_-_pam",
-    "filename": "vladimir_putin_--_pam.mp4"
+    "filename": "vladimir_putin_--_pam.mp4",
+    "lost": true
   },
   {
     "name": "Официальный ответ телеканала «Дождь» об увольнении Павла Лобкова",
@@ -363,7 +371,8 @@
     "draftPlaylist": false,
     "note": "Сурс с ограниченным доступом (скорее всего будет доступно после того как дождь уедет из России и возможно есть в их архиве за пейволом), видео удалено с макбука",
     "codeName": "oficialnyy_otvet_telekanala_dozhd_ob_uvolnenii_pav",
-    "filename": "oficialnyy_otvet_telekanala___dozhd___ob_uvolnenii_pavla_lobkova.mp4"
+    "filename": "oficialnyy_otvet_telekanala___dozhd___ob_uvolnenii_pavla_lobkova.mp4",
+    "lost": true
   },
   {
     "name": "CASSANDRA!!!!!!!!!!",
@@ -603,7 +612,8 @@
     "draftPlaylist": false,
     "note": "Удален с макбука",
     "codeName": "programmisty_glada_valakasa",
-    "filename": "programmisty_glada_valakasa.mp4"
+    "filename": "programmisty_glada_valakasa.mp4",
+    "lost": true
   },
   {
     "name": "Сайт Абобы 2024 — предвыборная президентская кампания",
@@ -684,7 +694,7 @@
     "filename": "prekrasnaya_rossiya_bu_bu_bu_--_zvonok_leonidu_volkovu.mp4"
   },
   {
-    "name": "Инес, вам не надоели вопросы «‎возможно ли выучить чешский язык за год» и про армию?",
+    "name": "Инес, вам не надоели вопросы «возможно ли выучить чешский язык за год» и про армию?",
     "views": 101,
     "uploadDate": "12 февраля 2021",
     "description": "Вырезано со стрима GoStudy, записи стримов с ответами на вопросы они удаляют. \nКанал GoStudy: https://www.youtube.com/channel/UCCkAlPXcfar6WmwM4ITglwg",
@@ -726,7 +736,8 @@
     "draftPlaylist": false,
     "note": "Итоговая запись и проект в давинчи удалены, остались только ассеты",
     "codeName": "aferisty_v_gostudy_istoriya_samogo_bolshogo_rozygr",
-    "filename": "aferisty_v_gostudy__istoriya_samogo_bolshogo_rozygrysha_.mp4"
+    "filename": "aferisty_v_gostudy__istoriya_samogo_bolshogo_rozygrysha_.mp4",
+    "lost": true
   },
   {
     "name": "ЧАТ ШЕВЦОВА [18+] 2021",
@@ -739,7 +750,8 @@
     "draftPlaylist": false,
     "note": "Удален с макбука",
     "codeName": "chat_shevcova_18_2021",
-    "filename": "chat_shevcova__18___2021.mp4"
+    "filename": "chat_shevcova__18___2021.mp4",
+    "lost": true
   },
   {
     "name": "Путин об отравлении Навального, почему не возбуждено уголовное дело (Кор. версия пресс конференции)",
@@ -765,7 +777,8 @@
     "draftPlaylist": false,
     "note": "Удален с макбука",
     "codeName": "morshu_ozvuchivaet_reklamu_plohogo_sayta",
-    "filename": "morshu_ozvuchivaet_reklamu_plohogo_sayta.mp4"
+    "filename": "morshu_ozvuchivaet_reklamu_plohogo_sayta.mp4",
+    "lost": true
   },
   {
     "name": "Алексей Шевцов психиатр",
@@ -862,7 +875,8 @@
     "draftPlaylist": false,
     "note": "Невозможно найти откуда я взял второй фрагмент с танками, это было не в районе 14 сентября, а значит я взял это из какой-то древней нарезки",
     "codeName": "mezhdu_nimi_10_let_raznicy",
-    "filename": "mezhdu_nimi_10_let_raznicy.mp4"
+    "filename": "mezhdu_nimi_10_let_raznicy.mp4",
+    "lost": true
   },
   {
     "name": "Глад Валакас рейдит ультра быкующую быдло бабу в одноклассниках",
@@ -930,7 +944,7 @@
     "draftPlaylist": false,
     "note": "",
     "codeName": "glad_valakas_reydit_ultra_bykuyushchuyu_bydlo_babu",
-    "filename": "glad_valakas_reydit_ultra_bykuyushchuyu_bydlo_babu_v_odnoklassnikah.mp4"
+    "filename": "glad_valakas_reydit_ultra_bykuyushchuyu_bydlo_babu_v_odnoklassnikah.m4v"
   },
   {
     "name": "Блондинка Таня (в теннисе мне нравится теннис) в майнкрафте",
@@ -1252,7 +1266,8 @@
     "draftPlaylist": false,
     "note": "Удалено, стрим скрыт",
     "codeName": "itpedia_pro_perezalivshchikov_i_zriteley_perezaliv",
-    "filename": "itpedia_pro_perezalivshchikov_i_zriteley_perezalivov.mp4"
+    "filename": "itpedia_pro_perezalivshchikov_i_zriteley_perezalivov.mp4",
+    "lost": true
   },
   {
     "name": "Тик ток Навального",
@@ -1646,7 +1661,8 @@
     "draftPlaylist": false,
     "note": "Удалено",
     "codeName": "roller_ride_trailer",
-    "filename": "roller_ride_trailer.mp4"
+    "filename": "roller_ride_trailer.mp4",
+    "lost": true
   },
   {
     "name": "Блондинка Таня (в теннисе мне нравится теннис)",

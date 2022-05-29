@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography'
 import { useTranslation } from 'next-i18next'
 import { pluralize, formatText, translateDate, getThumbnailURL } from '%/components/utils'
 import VideoPlayer from '%/components/VideoJS'
+import VideoFileNotFound from '%/components/VideoJS/VideoFileNotFound'
 
 YouTubeVideoPage.propTypes = {
   video: PropTypes.object.isRequired,
@@ -25,21 +26,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
 
   const likes = props.video.likes === '' ? null : props.video.likes
   const dislikes = props.video.dislikes === '' ? null : props.video.dislikes
-
-  const videoJsOptions = {
-    autoplay: false,
-    playbackRates: [0.5, 1, 1.25, 1.5, 2],
-    width: 720,
-    height: 300,
-    controls: true,
-    sources: [
-      {
-        src: `https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`,
-        type: 'video/mp4',
-      },
-    ],
-  };
-  
+  console.log(props.video)
   return (
     <main className={styles.container}>
       <Head>
@@ -50,30 +37,14 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
         <div className={styles.video}>
           <div className={styles.player}>
             <Skeleton variant='rectangular' height='100%' className={styles.fileBackground} />
-            {/* <video src={`https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`} /> */}
-            <div> 
-            <VideoPlayer 
-              // options={{
-              //   autoplay: false,
-              //   controls: true,
-              //   sources: [
-              //     {
-              //       src: `https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`,
-              //       type: 'video/mp4'
-              //     }
-              //   ]
-              // }}
-              // autoplay={false}
-              // controls={true}
-              // sources={[
-              //   {
-              //     type: 'video/mp4',
-              //     src: `https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`
-              //   }
-              // ]}
-                {...videoJsOptions}
-            />
-            </div>
+            {!props.video.lost ? (
+              <VideoPlayer 
+                src={`https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`} 
+                thumbnail={getThumbnailURL(props.video.filename)}
+              />
+            ) : (
+              <VideoFileNotFound />
+            )}
           </div>
           <Typography component='h1' className={styles.title}>{props.video.name}</Typography>
           <div className={styles.info}>
