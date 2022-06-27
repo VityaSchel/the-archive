@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <PageCard
           translationCode='instagram'
           img='https://ik.imagekit.io/hloth/the-archive-static/instagram.png?tr=n-landing_thumb'
-          lastUpdate={new Date('2022.05.08')}
+          // lastUpdate={new Date('2022.05.08')}
         />
         <PageCard
           translationCode='twitter'

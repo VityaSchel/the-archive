@@ -60,7 +60,12 @@
       color: #b1b1b1;
       transition: color 0.2s ease-out;
 
-      &:hover {
+      &[disabled] {
+        color: #616161;
+        pointer-events: none;
+      }
+
+      &:hover:not([disabled]) {
         color: #fff;
       }
     }

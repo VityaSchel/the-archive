@@ -1,0 +1,19 @@
+.container {
+  min-height: inherit;
+
+  .notFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: inherit;
+    color: #fff;
+
+    p {
+      max-width: 630px;
+      line-height: 1.5;
+      text-align: center;
+      color: #bbbbbb;
+    }
+  }
+}
