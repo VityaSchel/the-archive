@@ -3,6 +3,10 @@
   justify-content: center;
   padding-top: 64px;
   
+  @media screen and (max-width: 428px) {
+    padding: 64px 15px;
+  }
+  
   .videos {
     width: min-content;
     display: grid;
@@ -10,5 +14,11 @@
     column-gap: 4px;
     row-gap: 24px;
     margin: 20px 0;
+
+    @media screen and (max-width: 428px) {
+      width: 100%;
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
   }
 }

@@ -12,6 +12,12 @@
     width: 100%;
     gap: 100px;
     padding: 70px 0;
+
+    @media screen and (max-width: 428px) {
+      flex-direction: column-reverse;
+      padding: 20px 20px 40px 20px;
+      gap: 20px;
+    }
     
     .info {
       display: flex;
@@ -19,10 +25,18 @@
       align-items: flex-start;
       margin-top: 50px;
       gap: 40px;
+
+      @media screen and (max-width: 428px) {
+        margin-top: 0;
+      }
       
       .heading {
         font-weight: 600;
         font-size: 5rem;
+
+        @media screen and (max-width: 428px) {
+          font-size: 3rem;
+        }
       }
     
       .subheading {
@@ -40,11 +54,25 @@
       $size: 512px;
       width: $size;
       height: $size;
+
+      @media screen and (max-width: 428px) {
+        max-width: 100%;
+        height: auto;
+      }
+
+      video {
+        width: 100%;
+      }
     }
   }
 
   .cards {
     margin-top: -50px;
+
+    @media screen and (max-width: 428px) {
+      margin-top: 0;
+      padding-top: 20px;
+    }
 
     .pageCard {
       width: 1500px;
@@ -55,14 +83,29 @@
       flex-direction: row;
       justify-content: space-between;
 
+      @media screen and (max-width: 428px) {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 20px;
+      }
+
       .content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
 
+        @media screen and (max-width: 428px) {
+          gap: 10px;
+        }
+
         .title {
           font-size: 2rem;
+
+          @media screen and (max-width: 428px) {
+            font-size: 1rem;
+          }
         }
 
         .description {
@@ -72,6 +115,7 @@
           color: #d2d2d2;
           margin-top: 5px;
           max-width: 500px;
+          line-height: 1.5;
         }
 
         .lastUpdate {
@@ -90,6 +134,15 @@
         height: 200px;
         position: relative;
         align-self: flex-end;
+
+        @media screen and (max-width: 428px) {
+          width: 100%;
+          align-self: stretch;
+
+          img {
+            object-position: left !important;
+          }
+        }
       }
     }
   }
