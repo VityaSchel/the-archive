@@ -10,10 +10,27 @@
   align-items: center;
   flex-direction: column;
 
+  @media screen and (max-width: 1024px) {
+    padding: 10px;
+    overflow: auto;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    padding: 50px 10px 10px 10px;
+  }
+
   p {
     max-width: 800px;
     text-align: center;
     line-height: 1.6;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .note {
@@ -22,10 +39,20 @@
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+
+    @media screen and (max-width: 428px) {
+      padding: 10px;
+    }
     
     p {
       text-align: left;
       max-width: 630px;
+
+      @media screen and (max-width: 428px) {
+        max-width: 100%;
+        font-size: 14px;
+        margin: 0;
+      }
 
       &.noteText {
         &::before {

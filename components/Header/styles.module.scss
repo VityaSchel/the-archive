@@ -10,7 +10,7 @@
   transition: background-color 0.2s ease-in-out;
   backdrop-filter: blur(40px) !important;
 
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 768px) {
     overflow-x: scroll;
   }
   

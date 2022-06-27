@@ -12,6 +12,7 @@ import { useTranslation } from 'next-i18next'
 import { pluralize, formatText, translateDate, getThumbnailURL } from '%/components/utils'
 import VideoPlayer from '%/components/VideoJS'
 import VideoFileNotFound from '%/components/VideoJS/VideoFileNotFound'
+import cx from 'classnames'
 
 YouTubeVideoPage.propTypes = {
   video: PropTypes.object.isRequired,
@@ -35,7 +36,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
       <Header />
       <div className={styles.innerContainer}>
         <div className={styles.video}>
-          <div className={styles.player}>
+          <div className={cx(styles.player, { [styles.videoLost]: props.video.lost })}>
             <Skeleton variant='rectangular' height='100%' className={styles.fileBackground} />
             {!props.video.lost ? (
               <VideoPlayer 
