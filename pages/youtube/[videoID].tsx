@@ -26,7 +26,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
 
   const likes = props.video.likes === '' ? null : props.video.likes
   const dislikes = props.video.dislikes === '' ? null : props.video.dislikes
-  console.log(props.video)
+  
   return (
     <main className={styles.container}>
       <Head>
@@ -43,7 +43,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
                 thumbnail={getThumbnailURL(props.video.filename)}
               />
             ) : (
-              <VideoFileNotFound />
+              <VideoFileNotFound note={props.video.note} />
             )}
           </div>
           <Typography component='h1' className={styles.title}>{props.video.name}</Typography>
