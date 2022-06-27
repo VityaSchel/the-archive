@@ -14,6 +14,7 @@ Video.propTypes = {
   date: PropTypes.string.isRequired,
   codeName: PropTypes.string.isRequired,
   horizontal: PropTypes.bool,
+  drafts: PropTypes.bool,
   lost: PropTypes.bool,
   thumbnail: PropTypes.string
 }
@@ -23,8 +24,9 @@ interface VideoProps {
   date: string
   codeName: string
   horizontal?: boolean
+  drafts?: boolean
   lost?: boolean
-  thumbnail: string
+  thumbnail?: string
 }
 export default function Video(props: VideoProps) {
   const { t, i18n } = useTranslation()
@@ -38,6 +40,7 @@ export default function Video(props: VideoProps) {
             ? <VideoFileLost />
             : <Image src={props.thumbnail} alt={t('')} layout='fill' className={styles.thumbnailImage} />
           }
+          {props.drafts && <span className={styles.drafts}>{t('pages.youtube.video.draft')}</span>}
         </div>
         <div className={styles.meta}>
           <Typography className={styles.title}>{props.title}</Typography>
@@ -48,7 +51,6 @@ export default function Video(props: VideoProps) {
             <span>{translateDate(i18n.language, props.date)}</span>
           </Typography>
         </div>
-        {/* <div>{JSON.stringify(props.data)}</div> */}
       </a>
     </Link>
   )

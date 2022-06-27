@@ -78,6 +78,7 @@
         }
       },
       "video": {
+        "draft": "DRAFTS",
         "file_lost": {
           "description": "Read more on video page",
           "heading": "File lost"

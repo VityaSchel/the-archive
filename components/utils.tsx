@@ -64,6 +64,6 @@ export function translateDate(language: string, date: string) {
   }
 }
 
-export function getThumbnailURL(filename: string) {
-  return `https://ik.imagekit.io/hloth/the-archive-static/thumbnails/${filename.replace(/(\.mp4|\.m4v)$/, '')}.png`
+export function getThumbnailURL(thumbnail: string, fallbackFilename: string) {
+  return `https://ik.imagekit.io/hloth/the-archive-static/thumbnails/${thumbnail ?? (fallbackFilename.replace(/(\.mp4|\.m4v)$/, '') + '.png')}`
 }

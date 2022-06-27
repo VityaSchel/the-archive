@@ -40,7 +40,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
             {!props.video.lost ? (
               <VideoPlayer 
                 src={`https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`} 
-                thumbnail={getThumbnailURL(props.video.filename)}
+                thumbnail={getThumbnailURL(props.video.thumbnail, props.video.filename)}
               />
             ) : (
               <VideoFileNotFound note={props.video.note} />
@@ -116,8 +116,9 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
               views={video.views === '' ? null : video.views}
               date={video.uploadDate}
               codeName={video.codeName}
+              drafts={video.draftPlaylist}
               horizontal
-              thumbnail={getThumbnailURL(video.filename)}
+              thumbnail={getThumbnailURL(video.thumbnail, video.filename)}
               lost={video.lost}
             />
           ))}

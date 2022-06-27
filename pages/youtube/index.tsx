@@ -32,7 +32,8 @@ const YouTubeVideos: NextPage = () => {
             views={video.views === '' ? null : video.views}
             date={video.uploadDate}
             codeName={video.codeName}
-            thumbnail={getThumbnailURL(video.filename)}
+            drafts={video.draftPlaylist}
+            thumbnail={getThumbnailURL(video.thumbnail, video.filename)}
             lost={video.lost}
           />
         ))}

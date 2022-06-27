@@ -35,6 +35,18 @@
       object-fit: contain;
       background-color: #000;
     }
+
+    .drafts {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background-color: rgb(248 220 58);
+      border-radius: 3px;
+      font-weight: 800;
+      color: rgb(216 118 3);
+      padding: 2px 5px;
+      font-size: 10px;
+    }
   }
 
   .meta {

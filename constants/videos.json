@@ -1542,7 +1542,8 @@
     "draftPlaylist": false,
     "note": "",
     "codeName": "kto_takoy_valakas_reklama_google",
-    "filename": "kto_takoy_valakas___reklama_google_.mp4"
+    "filename": "kto_takoy_valakas___reklama_google_.mp4",
+    "thumbnail": "kto_takoy_valakas_google.png"
   },
   {
     "name": "Я установил minecraft raytracing-шейдеры и фотореалистичные текстуры",
