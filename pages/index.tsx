@@ -57,7 +57,7 @@ function TopBlock() {
       <div className={styles.info}>
         <Typography variant='h1' className={styles.heading}>{t('pages.home.heading')}</Typography>
         <Typography variant='h2' className={styles.subheading}>{t('pages.home.subheading')}</Typography>
-        <ButtonWithArrow className={styles.button} variant='contained'>
+        <ButtonWithArrow className={styles.button} variant='contained' disabled>
           {t('pages.home.read_article')}
         </ButtonWithArrow>
       </div>
