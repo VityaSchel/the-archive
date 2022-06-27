@@ -1,4 +1,7 @@
 {
+  "head": {
+    "description": "Сайт с полным архивом контента, созданным Виктором Щелочковым (@hloth). Видео с YouTube-канала Витя Чел, фото из Instagram, твиты из Twitter, репозитории с GitHub."
+  },
   "header": {
     "headline": "Сайт Архива",
     "bottom_line": "от hloth",
@@ -75,7 +78,8 @@
           "comments_disabled": "Комментарии были отключены",
           "no_info_on_comments": "Нет информации о комментариях",
           "no_info_on_description": "Нет информации об описании",
-          "replies": "Ответы"
+          "replies": "Ответы",
+          "description": "Видео на YouTube-канале Витя Чел. %video_description%"
         }
       },
       "video": {

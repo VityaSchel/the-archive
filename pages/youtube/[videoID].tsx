@@ -4,7 +4,7 @@ import videos from '%/constants/videos.json'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import styles from '%/styles/VideoPage.module.scss'
 import Header from '%/components/Header'
-import Head from 'next/head'
+import Head from '%/components/Head'
 import Video from '%/components/Video'
 import Skeleton from '@mui/material/Skeleton'
 import Typography from '@mui/material/Typography'
@@ -27,12 +27,15 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
 
   const likes = props.video.likes === '' ? null : props.video.likes
   const dislikes = props.video.dislikes === '' ? null : props.video.dislikes
-  
+  const thumbnail = getThumbnailURL(props.video.thumbnail, props.video.filename)
+
   return (
     <main className={styles.container}>
-      <Head>
-        <title>{t('pages.youtube.pages.video.title').replace('%video_name%', props.video.name)}</title>
-      </Head>
+      <Head 
+        title={t('pages.youtube.pages.video.title').replace('%video_name%', props.video.name)}
+        description={t('pages.youtube.pages.video.description').replace('%video_description%', props.video.description)}
+        banner={{ src: thumbnail, width: 374, height: 210 }}
+      />
       <Header />
       <div className={styles.innerContainer}>
         <div className={styles.video}>
@@ -41,7 +44,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
             {!props.video.lost ? (
               <VideoPlayer 
                 src={`https://ik.imagekit.io/hloth/the-archive/${props.video.filename}`} 
-                thumbnail={getThumbnailURL(props.video.thumbnail, props.video.filename)}
+                thumbnail={thumbnail}
               />
             ) : (
               <VideoFileNotFound note={props.video.note} />

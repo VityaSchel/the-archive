@@ -19,9 +19,9 @@ const Home: NextPage = () => {
 
   return (
     <main className={styles.main}>
-      <Head>
-        <title>{t('pages.home.title')}</title>
-      </Head>
+      <Head 
+        title={t('pages.home.title')}
+      />
       <Header />
 
       <TopBlock />

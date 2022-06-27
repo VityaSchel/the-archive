@@ -12,9 +12,9 @@ const PageNotFound: NextPage = () => {
 
   return (
     <main className={styles.container}>
-      <Head>
-        <title>{t('pages.page_not_found.title')}</title>
-      </Head>
+      <Head 
+        title={t('pages.page_not_found.title')}
+      />
       <Header placeholder={false} />
       <div className={styles.notFound}>
         <h1>{t('pages.page_not_found.title')}</h1>

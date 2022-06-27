@@ -75,7 +75,8 @@
           "no_info_on_comments": "No info about comments",
           "replies": "Replies",
           "title": "%video_name% — The Archive by hloth",
-          "no_info_on_description": "No information about description"
+          "no_info_on_description": "No information about description",
+          "description": "Video on «Витя Чел» YouTube-channel. %video_description%"
         }
       },
       "video": {
@@ -90,5 +91,8 @@
       "description": "Really not found, because there was never such a page here, not because it was banned, deleted from public view and being kept in db secretly.",
       "title": "Page not found"
     }
+  },
+  "head": {
+    "description": "Web archive with content created by Viktor Shchelochkov (@hloth). Videos from «Витя Чел» YouTube channel, photos from Instagram, tweets from Twitter, repositories from GitHub."
   }
 }

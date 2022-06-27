@@ -20,9 +20,9 @@ const YouTubeVideos: NextPage = () => {
 
   return (
     <main className={styles.container}>
-      <Head>
-        <title>{t('pages.youtube.pages.videos.title')}</title>
-      </Head>
+      <Head 
+        title={t('pages.youtube.pages.videos.title')}
+      />
       <Header />
       <div className={styles.videos}>
         {clone(videos).sort(sortFunc).map(video => (
