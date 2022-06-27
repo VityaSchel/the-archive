@@ -14,6 +14,7 @@ Video.propTypes = {
   date: PropTypes.string.isRequired,
   codeName: PropTypes.string.isRequired,
   horizontal: PropTypes.bool,
+  lost: PropTypes.bool,
   thumbnail: PropTypes.string
 }
 interface VideoProps {
@@ -22,6 +23,7 @@ interface VideoProps {
   date: string
   codeName: string
   horizontal?: boolean
+  lost?: boolean
   thumbnail: string
 }
 export default function Video(props: VideoProps) {
@@ -32,7 +34,10 @@ export default function Video(props: VideoProps) {
       <a className={cx(styles.video, { [styles.horizontal]: props.horizontal })}>
         <div className={styles.thumbnail}>
           <Skeleton variant='rectangular' className={styles.thumbnailSkeleton} />
-          {props.thumbnail && <Image src={props.thumbnail} alt={t('')} layout='fill' className={styles.thumbnailImage} />}
+          {props.lost
+            ? <VideoFileLost />
+            : <Image src={props.thumbnail} alt={t('')} layout='fill' className={styles.thumbnailImage} />
+          }
         </div>
         <div className={styles.meta}>
           <Typography className={styles.title}>{props.title}</Typography>
@@ -46,5 +51,16 @@ export default function Video(props: VideoProps) {
         {/* <div>{JSON.stringify(props.data)}</div> */}
       </a>
     </Link>
+  )
+}
+
+function VideoFileLost() {
+  const { t } = useTranslation()
+
+  return (
+    <div className={styles.fileLost}>
+      <span className={styles.heading}>{t('pages.youtube.video.file_lost.heading')}</span>
+      <span className={styles.description}>{t('pages.youtube.video.file_lost.description')}</span>
+    </div>
   )
 }

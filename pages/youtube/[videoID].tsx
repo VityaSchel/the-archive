@@ -118,6 +118,7 @@ function YouTubeVideoPage(props: YouTubeVideoPageProps) {
               codeName={video.codeName}
               horizontal
               thumbnail={getThumbnailURL(video.filename)}
+              lost={video.lost}
             />
           ))}
         </div>

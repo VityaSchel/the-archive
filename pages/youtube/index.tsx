@@ -21,7 +21,7 @@ const YouTubeVideos: NextPage = () => {
   return (
     <main className={styles.container}>
       <Head>
-        <title>{t('pages.youtube.title')}</title>
+        <title>{t('pages.youtube.pages.videos.title')}</title>
       </Head>
       <Header />
       <div className={styles.videos}>
@@ -33,6 +33,7 @@ const YouTubeVideos: NextPage = () => {
             date={video.uploadDate}
             codeName={video.codeName}
             thumbnail={getThumbnailURL(video.filename)}
+            lost={video.lost}
           />
         ))}
       </div>

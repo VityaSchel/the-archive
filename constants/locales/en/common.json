@@ -32,7 +32,8 @@
           "title": "List of my photos and highlights in Instagram",
           "image_alt": "Screenshot of my Instagram profile",
           "description": "In case it gets banned too",
-          "button": "Browse photos"
+          "button": "Browse photos",
+          "button_": "Browse photos"
         },
         "twitter": {
           "title": "Timeline of my tweets in Twitter",
@@ -47,7 +48,8 @@
           "image_alt": "Screenshot of my GitHub profile"
         },
         "last_update": "Last update"
-      }
+      },
+      "title": "Home — The Archive by hloth"
     },
     "youtube": {
       "pages": {
@@ -56,6 +58,11 @@
             "thumbnail_alt": "Video thumbnail",
             "views": "views",
             "upload_date": "Upload date"
+          },
+          "title": "Videos from Витя Чел — The Archive by hloth",
+          "video_file_not_found": {
+            "description": "Unfortunately, there is no copy of this video left on my PC. \nThis often happens with long streams or videos that I made on a macbook where space is very limited. \nPerhaps this video was included in a small list of those that can be restored, but this is unlikely to happen in the near future.",
+            "heading": "Video file lost"
           }
         },
         "video": {
@@ -63,9 +70,22 @@
           "unknown": "Unknown",
           "comments_disabled": "Comments were disabled",
           "comments_title": "comments",
-          "no_info_on_comments": "No info about comments"
+          "no_info_on_comments": "No info about comments",
+          "replies": "Replies",
+          "title": "%video_name% — The Archive by hloth",
+          "no_info_on_description": "No information about description"
+        }
+      },
+      "video": {
+        "file_lost": {
+          "description": "Read more on video page",
+          "heading": "File lost"
         }
       }
+    },
+    "page_not_found": {
+      "description": "Really not found, because there was never such a page here, not because it was banned, deleted from public view and being kept in db secretly.",
+      "title": "Page not found"
     }
   }
 }

@@ -75,6 +75,12 @@
           "no_info_on_description": "Нет информации об описании",
           "replies": "Ответы"
         }
+      },
+      "video": {
+        "file_lost": {
+          "heading": "Файл утерян",
+          "description": "Подробнее читайте на странице с видео"
+        }
       }
     },
     "page_not_found": {

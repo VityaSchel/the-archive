@@ -62,4 +62,25 @@
       width: 190px;
     }
   }
+
+  .fileLost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url(./noise.svg);
+    filter: grayscale(1);
+    height: 100%;
+    gap: 7px;
+
+    .heading {
+      font-weight: 800;
+    }
+
+    .description {
+      font-size: 12px;
+      width: 80%;
+    }
+  }
 }
