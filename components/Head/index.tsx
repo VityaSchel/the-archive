@@ -20,6 +20,7 @@ export default function CustomHead(props: HeadProps) {
     <Head>
       {/* <link href="//vjs.zencdn.net/6.1.0/video-js.css" rel="stylesheet" /> */}
       <meta name="description" content={props.description ?? t('head.description')} />
+      <title>{props.title}</title>
       {props.children}
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
