@@ -65,6 +65,11 @@
             "description": "Unfortunately, there is no copy of this video left on my PC. \nThis often happens with long streams or videos that I made on a macbook where space is very limited. \nPerhaps this video was included in a small list of those that can be restored, but this is unlikely to happen in the near future.",
             "heading": "Video file lost",
             "note": "Note from archivator:"
+          },
+          "sort_functions": {
+            "date_asc": "Old videos first",
+            "date_desc": "New videos first",
+            "views_desc": "Popular videos first"
           }
         },
         "video": {
