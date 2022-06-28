@@ -11,7 +11,7 @@ import ButtonWithArrow from '%/components/Button'
 import Button from '@mui/material/Button'
 import { Card } from '@mui/material'
 import { format } from 'date-fns'
-import { ru, en } from 'date-fns/locale'
+import { ru, enUS } from 'date-fns/locale'
 import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
@@ -89,7 +89,7 @@ function PageCard(props: PageCardProps) {
         <Typography variant='h4' className={styles.description}>{t('pages.home.cards.' + props.translationCode + '.description')}</Typography>
         {props.lastUpdate && (
           <Typography variant='caption' className={styles.lastUpdate}>{t('pages.home.cards.last_update')}: {
-            format(props.lastUpdate, 'd MMMM yyyy', { locale: i18n.language === 'ru' ? ru : en })
+            format(props.lastUpdate, 'd MMMM yyyy', { locale: i18n.language === 'ru' ? ru : enUS })
           }</Typography>
         )}
         {props.lastUpdate ? (

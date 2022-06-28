@@ -1,8 +1,8 @@
 import React from 'react'
 import plural from 'plural-ru'
 import Link from 'next/link'
-import { format, parse } from 'date-fns'
-import { ru, en } from 'date-fns/locale'
+import { parse } from 'date-fns'
+import { ru, enUS } from 'date-fns/locale'
 
 export const pluralize = (number: string | number, str: string) => {
   if (typeof number === 'string') number = Number(number.replace(/^[^0-9]+/, ''))
