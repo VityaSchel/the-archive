@@ -14,7 +14,7 @@ The Archive contains video files from my deleted YouTube channel, photos from my
 
 By creating The Archive website, I transferred the rights on my content to myself. Even if I lose all the accounts in the social networks, I will have a centralized (ironically) source of data. While the files are actually stored on my hosting, which could delete my virtual server, they are also stored in my backups that I make regulary.
 
-What will happen if my domain is taken from me? This is conspiracy, it is obvious that there is no[ ](https://github.com/arasfon)hater that following me and deleting all my accounts, but anyway I decided to make this website Tor Hidden Service at ()
+What will happen if my domain is taken from me? This is conspiracy, it is obvious that there is no[ ](https://github.com/arasfon)hater that following me and deleting all my accounts, but anyway I decided to make this website Tor Hidden Service at [archive.hlothadmob6vsssnjd7ovwyz4z2le4pbpbyfhqbuwooyq62ona3l4bid.onion](http://archive.hlothadmob6vsssnjd7ovwyz4z2le4pbpbyfhqbuwooyq62ona3l4bid.onion)
 
 ## Development
 
