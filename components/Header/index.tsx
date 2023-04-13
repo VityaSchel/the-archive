@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import styles from './styles.module.scss'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-import Link, { Url } from 'next/link'
+import Link from 'next/link'
 import { useTranslation } from 'next-i18next'
-import Head from 'next/head'
 import { useRouter } from 'next/router'
 import cx from 'classnames'
 import { useScrollPosition } from '@n8tb1t/use-scroll-position'
@@ -13,6 +12,8 @@ import Button from '@mui/material/Button'
 import { MdLanguage } from 'react-icons/md'
 import Typography from '@mui/material/Typography'
 import LanguagesDialog from '%/components/Languages'
+import { IconButton } from '@mui/material'
+import { SiTorbrowser } from 'react-icons/si'
 
 export default function Header(props) {
   const router = useRouter()
@@ -46,9 +47,15 @@ export default function Header(props) {
           <Item href='instagram' disabled>{t('header.links.photos')}</Item>
           <Item href='twitter' disabled>{t('header.links.tweets')}</Item>
           <Item href='github' disabled>{t('header.links.repositories')}</Item>
+          <Link href='http://archive.hlothadmob6vsssnjd7ovwyz4z2le4pbpbyfhqbuwooyq62ona3l4bid.onion'>
+            <a className={styles.right}>
+              <IconButton>
+                <SiTorbrowser />
+              </IconButton>
+            </a>
+          </Link>
           <Button 
-            disableRipple 
-            className={styles.languages}
+            disableRipple
             onClick={() => setLanguagesDialogVisible(true)}
           >
             <MdLanguage />

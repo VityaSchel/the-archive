@@ -78,9 +78,12 @@
       }
     }
 
+    .right {
+      margin-left: auto !important;
+    }
+
     .languages {
       border-radius: 10px;
-      margin-left: auto;
     }
   }
 }
