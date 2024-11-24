@@ -44,9 +44,6 @@ export default function Header(props) {
           </Link>
           <span className={styles.divider} />
           <Item href='youtube'>{t('header.links.videos')}</Item>
-          <Item href='instagram' disabled>{t('header.links.photos')}</Item>
-          <Item href='twitter' disabled>{t('header.links.tweets')}</Item>
-          <Item href='github' disabled>{t('header.links.repositories')}</Item>
           <Link href='http://archive.hlothadmob6vsssnjd7ovwyz4z2le4pbpbyfhqbuwooyq62ona3l4bid.onion'>
             <a className={styles.right}>
               <IconButton>
